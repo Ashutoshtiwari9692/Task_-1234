@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import Header from '../components/Header';
-import Sidebar from '../components/Sidebar';
-import TaskCard from '../components/TaskCard';
-import TaskForm from '../components/TaskForm';
+import Header from './components/Header';
+import Sidebar from './components/Sidebar';
+import TaskCard from './components/TaskCard';
+import TaskForm from './components/TaskForm';
 import './Dashboard.css';
 
 /**
@@ -10,7 +10,7 @@ import './Dashboard.css';
  * Main page displaying tasks with filter options and task management functionality
  */
 const Dashboard = () => {
-  const API_BASE_URL = 'http://localhost:5000/api/tasks';
+  const API_BASE_URL = 'http://localhost:8000/api/tasks';
 
   const [tasks, setTasks] = useState([]);
   const [filteredTasks, setFilteredTasks] = useState([]);
