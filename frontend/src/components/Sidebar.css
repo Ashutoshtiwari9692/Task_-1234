@@ -1,0 +1,119 @@
+/* ===========================
+   SIDEBAR COMPONENT STYLES
+   =========================== */
+
+.sidebar {
+  width: 250px;
+  background-color: var(--bg-secondary);
+  border-right: 1px solid var(--bg-tertiary);
+  padding: var(--spacing-lg) 0;
+  height: calc(100vh - 80px);
+  position: sticky;
+  top: 80px;
+  overflow-y: auto;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  padding: 0 var(--spacing-md);
+}
+
+/* Sidebar Items */
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md) var(--spacing-lg);
+  background-color: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-normal);
+  text-align: left;
+}
+
+.sidebar-item:hover {
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+  transform: translateX(4px);
+}
+
+.sidebar-item.active {
+  background-color: var(--accent-primary);
+  color: white;
+  font-weight: 600;
+}
+
+.sidebar-item.active:hover {
+  background-color: var(--accent-primary-hover);
+}
+
+/* Filter Icons */
+.filter-icon {
+  font-size: 1.25rem;
+  min-width: 24px;
+}
+
+.filter-label {
+  flex: 1;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+   =========================== */
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--bg-tertiary);
+    padding: var(--spacing-md) 0;
+  }
+
+  .sidebar-nav {
+    flex-direction: row;
+    gap: 0;
+    padding: 0;
+    overflow-x: auto;
+  }
+
+  .sidebar-item {
+    flex: 1;
+    justify-content: center;
+    gap: 0;
+    padding: var(--spacing-md);
+    min-width: 80px;
+  }
+
+  .filter-icon {
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .filter-label {
+    display: block;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar-item {
+    min-width: 60px;
+    padding: var(--spacing-sm);
+  }
+
+  .filter-icon {
+    font-size: 1rem;
+  }
+
+  .filter-label {
+    display: none;
+  }
+}
