@@ -10,7 +10,7 @@ import './Dashboard.css';
  * Main page displaying tasks with filter options and task management functionality
  */
 const Dashboard = () => {
-  const API_BASE_URL = 'http://localhost:8000/api/tasks';
+  const API_BASE_URL = 'https://task-1234-1.onrender.com';
 
   const [tasks, setTasks] = useState([]);
   const [filteredTasks, setFilteredTasks] = useState([]);
